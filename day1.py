@@ -1,4 +1,4 @@
-filename = 'day1_problem1.txt'
+filename = 'day1.txt'
 
 report = {}
 for line in open(filename,'r'):
@@ -23,4 +23,3 @@ for line,_ in report.items():
 		break
 
 print(line*line2*(2020-line-line2))
-
