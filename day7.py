@@ -1,7 +1,6 @@
 filename = 'day7.txt'
 
 import networkx as nx
-import matplotlib.pyplot as plt
 
 G = nx.DiGraph()
 
