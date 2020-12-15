@@ -14,10 +14,7 @@ def compute_last_spoken(memory:list, nth_number_spoken:int) -> int:
 
 	i +=1 
 
-	# progress bar to check solution progress
-	pbar = tqdm(total = nth_number_spoken, initial = i)
-
-	while i < nth_number_spoken:
+	for i in tqdm(range(i, nth_number_spoken), initial = i, total = nth_number_spoken):
 
 		last_spoken_times = len(spoken[last])
 
@@ -28,11 +25,6 @@ def compute_last_spoken(memory:list, nth_number_spoken:int) -> int:
 			indices = spoken[last]
 			last = indices[-1] - indices[-2]
 			spoken[last].append(i)
-
-		i+=1
-		pbar.update(1)
-
-	pbar.close()
 
 	return last
 
